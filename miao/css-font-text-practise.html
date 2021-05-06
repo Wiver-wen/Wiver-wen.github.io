@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+    /* 只能在这里写css，不能改变页面的HTML结构 */
+    h1, h3 {
+      text-align: center;
+      font-size: 40px;
+    }
+    h1 { 
+      text-shadow: 1px 1px 3px rgba(11, 198, 204, 0.425),
+      2px 2px 3px rgba(11, 198, 204, 0.425),
+      3px 3px 3px rgba(11, 198, 204, 0.425),
+      4px 4px 3px rgba(11, 198, 204, 0.425),
+      5px 5px 3px rgba(11, 198, 204, 0.425),
+      6px 6px 3px rgba(11, 198, 204, 0.425),
+      7px 7px 3px rgba(11, 198, 204, 0.425),
+      8px 8px 3px rgba(11, 198, 204, 0.425),
+      9px 9px 3px rgba(11, 198, 204, 0.425),
+      10px 10px 3px rgba(11, 198, 204, 0.425),
+      11px 11px 3px rgba(11, 198, 204, 0.425),
+      12px 12px 3px rgba(11, 198, 204, 0.425),
+      13px 13px 3px rgba(11, 198, 204, 0.425),
+      14px 14px 3px rgba(11, 198, 204, 0.425),
+      15px 15px 3px rgba(11, 198, 204, 0.425),
+      16px 16px 3px rgba(11, 198, 204, 0.425),
+      17px 17px 3px rgba(11, 198, 204, 0.425),
+      18px 18px 3px rgba(11, 198, 204, 0.425),
+      19px 19px 3px rgba(11, 198, 204, 0.425),
+      20px 20px 3px rgba(11, 198, 204, 0.425),
+      21px 21px 3px rgba(11, 198, 204, 0.425),
+      22px 22px 3px rgba(11, 198, 204, 0.425),
+      23px 23px 3px rgba(11, 198, 204, 0.425),
+      24px 24px 3px rgba(11, 198, 204, 0.425),
+      25px 25px 3px rgba(11, 198, 204, 0.425),
+      26px 26px 3px rgba(11, 198, 204, 0.425),
+      27px 27px 3px rgba(11, 198, 204, 0.425),
+      28px 28px 3px rgba(11, 198, 204, 0.425),
+      29px 29px 3px rgba(11, 198, 204, 0.425),
+      30px 30px 3px rgba(11, 198, 204, 0.425),
+      31px 31px 3px rgba(11, 198, 204, 0.425),
+      32px 32px 3px rgba(11, 198, 204, 0.425),
+      33px 33px 3px rgba(11, 198, 204, 0.425),
+      34px 34px 3px rgba(11, 198, 204, 0.425),
+      35px 35px 3px rgba(11, 198, 204, 0.425),
+      36px 36px 3px rgba(11, 198, 204, 0.425),
+      37px 37px 3px rgba(11, 198, 204, 0.425),
+      38px 38px 3px rgba(11, 198, 204, 0.425),
+      39px 39px 3px rgba(11, 198, 204, 0.425),
+      40px 40px 3px rgba(11, 198, 204, 0.425),
+      41px 41px 3px rgba(11, 198, 204, 0.425),
+      42px 42px 3px rgba(11, 198, 204, 0.425),
+      43px 43px 3px rgba(11, 198, 204, 0.425),
+      44px 44px 3px rgba(11, 198, 204, 0.425),
+      45px 45px 3px rgba(11, 198, 204, 0.425),
+      46px 46px 3px rgba(11, 198, 204, 0.425),
+      47px 47px 3px rgba(11, 198, 204, 0.425),
+      48px 48px 3px rgba(11, 198, 204, 0.425),
+      49px 49px 3px rgba(11, 198, 204, 0.425),
+      50px 50px 3px rgba(11, 198, 204, 0.425),
+      51px 51px 3px rgba(11, 198, 204, 0.425),
+      52px 52px 3px rgba(11, 198, 204, 0.425),
+      53px 53px 3px rgba(11, 198, 204, 0.425),
+      54px 54px 3px rgba(11, 198, 204, 0.425),
+      55px 55px 3px rgba(11, 198, 204, 0.425),
+      56px 56px 3px rgba(11, 198, 204, 0.425),
+      57px 57px 3px rgba(11, 198, 204, 0.425),
+      58px 58px 3px rgba(11, 198, 204, 0.425),
+      59px 59px 3px rgba(11, 198, 204, 0.425),
+      60px 60px 3px rgba(11, 198, 204, 0.425) ;
+
+    }
+    .b {
+      font-size: 32px;
+      }
+    input {
+      font: inherit;
+
+    }
+    h1 > span {
+      color: rgba(20, 80, 104, 0.87);
+    }
+    h3  {
+      color: white;
+      text-shadow:  0px 0px 4px rgb(192, 15, 89),
+                    0px 0px 4px rgb(192, 15, 89),
+                    0px 0px 4px rgb(192, 15, 89),
+                    0px 0px 4px rgb(192, 15, 89);
+       }
+    
+    .a {
+      font-size: 38px;
+      font-family: initial sans-serif;
+      font-style: italic;
+      text-align :right;
+    }
+   p.a span  {
+      color: lightcoral;
+      text-decoration-line: underline;
+    }
+   p.a > span {
+      text-decoration-line: line-through;
+   }
+   h2 {
+     font-family: "Magneto 粗体", sans-serif;
+     text-transform: capitalize;
+     font-variant: small-caps;
+     text-shadow: 0 0 8px rgba(240, 4, 4, 0.308);
+     text-align: center;
+    }
+  .d  {
+    font-weight: lighter;
+    text-indent: 2em ;
+    letter-spacing: 1mm;
+    word-spacing: 5mm;
+    line-height: 2;
+  }
+  .c span{
+    font-size: 150%;
+  }
+  }
+  </style>
+</head>
+<body>
+  <h1>大<span>喵</span>教育</h1>
+  <h3>大<span>喵</span>教育</h3>
+  <p class="b">
+    请输入序列号：<input placeholder="我的字号会跟外面一样大" type="text"> <br>
+  </p>
+  <h2>'Returnal' players need to take a break before a bug eats their save files '篝火'玩家需要在游戏的 bug 吃掉他们的存档之前先休息一下</h2>
+  <p class="a">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure <b><span>suscipit</span></b> doloremque magnam delectus, reiciendis architecto ipsam nihil numquam <span>nesciunt sapiente, accusantium, dolore.</span> Culpa repudiandae incidunt delectus. Officia, veritatis voluptas accusantium.</p>
+  <p class="d">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, autem, ad. Quos fugit quam, vitae doloribus quo quisquam aut iure! Exercitationem ea in voluptatibus a, perspiciatis libero, eum quod? Et!</p>
+
+  <p class="c">
+    <span>aa <span>bb <span>cc <span></span>dd</span></span></span>
+  </p>
+
+</body>
+</html>
