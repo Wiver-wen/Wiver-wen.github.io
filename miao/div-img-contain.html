@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      height: 300px;
+      width: 300px; 
+      border: solid 5px lightpink;
+      margin: auto;
+      float: left;
+    }
+    [a] > img{
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+      margin: auto;
+    }
+    [b]{
+      position: relative;
+    }
+    [b] > img{
+      max-width: 100%;
+      max-height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    [c] > img{
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+
+
+    }
+    [aa] > img{
+      width: 300px;
+      height: 300px;
+      object-fit: contain;
+
+    }
+    [bb]{
+      position: relative;
+    }
+    [bb] > img{
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div a><img src="https://uploadfile.bizhizu.cn/2016/1222/20161222061529892.jpg" alt=""></div>
+  <div b><img
+      src="https://th.bing.com/th/id/R8526080d563fafed4c112bed6646a640?rik=Vfe8D%2fnemCYl7A&riu=http%3a%2f%2fimg1.gtimg.com%2f0%2f60%2f6009%2f600928_1200x1000_0.jpg&ehk=Yk5VljRnKLnJkLkYIB6r4K47Wh6o1uHUIAoTNj5db74%3d&risl=&pid=ImgRaw"
+      alt=""></div>
+  <div c><img
+      src="https://uploadfile.bizhizu.cn/2016/1222/20161222061529892.jpg"
+      alt=""></div>
+  <div aa><img src="https://uploadfile.bizhizu.cn/2016/1222/20161222061529892.jpg" alt=""></div>
+  <div bb><img src="https://p1.igxzy.com/Uploads/vod/20210405/202133018434974489.jpg" alt=""></div>
+  <div cc ></div>
+</body>
+</html>
