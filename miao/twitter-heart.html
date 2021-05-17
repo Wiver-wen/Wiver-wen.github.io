@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    body , ul{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    } 
+    .two > li{                             /*选中body里的ul里的li  */
+      display: inline-block;                    /*声明是行内块 */
+      border: lightblue 3px solid;
+      width: 50px;
+      text-align: left;
+    }
+    ul ul{
+      display: none;                            /*将二级和三级列表隐藏 */
+      position: absolute;                       /*相对定位 */ 
+    }
+    li{
+      position: relative;                        /*为ul声明定位祖先 */
+      font-size: smaller;
+
+      border: solid 3px rgb(134, 219, 194);
+      white-space: nowrap;                       /* 禁止内容因为包含块宽度不够而折行*/
+    }
+    ul > li:hover > ul{ 
+       display: block;
+    }
+    li li:hover > ul{
+      display: block;
+      left: 100%;
+      top: -1%;
+    }
+    ul li:hover{
+      background-color: blue;
+    }
+ 
+    
+  </style>
+</head>
+<body>
+  <ul class="two">
+    <li>文件(F)
+      <ul>
+        <li>新建
+          <ul>
+            <li>txt</li>
+            <li>md</li>
+            <li>html</li>
+          </ul>
+        </li>
+        <li>新建窗口
+            <ul>
+              <li>IE窗口</li>
+              <li>火狐窗口</li>
+              <li>谷歌窗口</li>
+            </ul>
+        </li>
+        <li>打开
+          <ul>
+            <li>111</li>
+            <li>222</li>
+            <li>333</li>
+          </ul>
+        </li>
+        <li>快速打开
+          <ul>
+            <li>aaa</li>
+            <li>bbb</li>
+            <li>ccc</li>
+          </ul>
+        </li>
+        <li>打开最近...</li>
+      </ul>
+    </li>
+    <li>编辑(E)
+      <ul>
+        <li>撤销
+          <ul>
+            <li>撤销失败</li>
+            <li>重试</li>
+            <li>死机</li>
+          </ul>
+        </li>
+        <li>重做
+          <ul>
+            <li>qqq</li>
+            <li>www</li>
+            <li>eee</li>
+          </ul>
+        </li>
+        <li>复制
+          <ul>
+            <li>rrr</li>
+            <li>www</li>
+            <li>qqq</li>
+          </ul>
+        </li>
+        <li>粘贴</li>
+        <li>删除</li>
+      </ul>
+    </li>
+    <li>段落(P)
+      <ul>
+        <li>一级标题</li>
+        <li>二级标题</li>
+        <li>三级标题</li>
+        <li>四级标题</li>
+        <li>五级标题</li>
+      </ul>
+    </li>
+    <li>格式(O)
+      <ul>
+        <li>加粗</li>
+        <li>斜体</li>
+        <li>代码</li>
+        <li>下划线</li>
+      </ul>
+    </li>
+    <li>视图(V)</li>
+    
+    <li>主题(T)</li>
+    <li>帮助(H)</li>
+  </ul>
+  
+</body>
+</html>
