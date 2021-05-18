@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      width: 400px;
+      height: 300px;
+      float: left;
+      background-color: lightskyblue;
+      margin: 100px 80px;
+      position: relative;
+    }
+    div :nth-child(1){
+      width: 100px;
+      height: 100px;
+      background-color: lightsalmon;
+    }
+     div span{
+      display: block;
+      position: absolute;
+      top: 0; 
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    section{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      margin: auto;
+    }
+    main{
+      width: 400px;
+      height: 300px;
+      background-color: lightskyblue;
+      margin: 100px 80px;
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    }
+    span{
+      display: inline-block;
+      background-color: lightsalmon;
+      width: 100px; 
+      height: 100px;
+    }
+   
+    </style>
+</head>
+<body>
+  <div><span></span> </div>
+  <div><section></section> </div>
+ <main><span></span></main>
+</body>
+</html>
