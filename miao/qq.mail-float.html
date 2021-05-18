@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .a,.b,.c{
+      position: fixed;
+    }
+    .a{
+      width: 100vw;
+      height: 15vh;
+      background-color: rgb(155, 17, 17);
+      top: 0;
+    }
+    .b{
+      width: 15vw;
+      height: 85vh;
+      background-color: rgb(0, 0, 0);
+      top: 15vh;
+      left: 0;
+    }
+    .c{
+      background-color: rgb(189, 189, 38);
+      width: 85vw;
+      height: 85vh;
+      left: 15vw;
+      bottom: 0;
+    }
+    .c :nth-child(1){
+      width: 100%;
+      height: 15%;
+    }
+    .c :nth-child(2){
+      width: 15%;
+      height: 85%;
+      
+    }
+    .c :nth-child(3){
+      width: 85%;
+      height: 85%;
+      
+    }
+    .c div{
+      float: left;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="a">
+  </div>
+  <div class="b">
+  </div>
+  <div class="c">
+    <div style="background-color: magenta;"></div>
+    <div style="background-color: rgb(228, 135, 240);"></div>
+    <div style="background-color: mediumturquoise;"></div>
+  </div>
+</body>
+</html>
