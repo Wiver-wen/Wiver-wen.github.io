@@ -42,9 +42,9 @@
 <script id="ch0103/06" type="xxx">
   var a = Number(prompt('请输入确诊数'))
   var b = Number(prompt('请输入死亡数'))
-  var x = b / a 
-  var y = x.toFixed(3) * 100
-  console.log("死亡率为:" + y.toFixed(3) + " % " )
+  var x = b / a
+  var x = x.toFixed(5) * 100
+  console.log("死亡率为:" + x + " % " )
 </script>
 
 <script id="ch0103/07" type="xxx">
@@ -55,7 +55,7 @@
   var d = Number(prompt('请输入d'))
   if(a * a < 10000 && b * b < 10000 && c * c < 10000 && d * d < 10000 && x * x < 10000 ){
     var Fx = a*x*x*x+b*x*x+c*x+d
-    console.log("f(x):" + Fx.toFixed(7))
+    console.log(Fx.toFixed(7))
   }else{
     console.log("请输入绝对值小于100的值!")
   }
@@ -65,19 +65,19 @@
 <script id="ch0103/08" type="xxx">
   var F = Number(prompt('请输入华氏温度'))
   if(F >= -459.67){
-  var C = 5 * (F-32)/9)
+  var C = 5 * (F-32)/9
   console.log(C.toFixed(5))
   }else{
     console.log("温度超限!请输入合理的值!")
   }
 </script>
-  
+
 <script id="ch0103/09" type="xxx">
   var radius = Number(prompt('圆的半径'))
   if(radius>0&&radius<=10000){
   var dia = 2*radius
-  var cir = 3.1915926 * dia
-  var area = 3.1415926 * radius *radius
+  var cir = 3.14159 * dia
+  var area = 3.1415 * radius *radius
   console.log(dia.toFixed(4))
   console.log(cir.toFixed(4))
   console.log(area.toFixed(4))
@@ -96,17 +96,19 @@
 <script id="ch0103/11" type="xxx">
   var a = Number(prompt('请输入a的值'))
   var b = Number(prompt('请输入b的值'))
-  console.log(a % b))
+  var c = a % b
+  console.log(c.toFixed(4))
 </script>
 
 <script id="ch0103/12" type="xxx">
-  var radius = Number(prompt('请输入球的半径'))
-  while(radius<100 && radius>0){
-    var V = 4 / 3 * 3.14 * radius * radius * radius 
-    }else{
-      console.log('数据过大无法计算')
-    }
-  console.log(V)
+ var radius = Number(prompt('请输入球的半径'))
+ if(radius<100 && radius>0){
+   var V = 4 / 3 * 3.14 * radius * radius * radius
+   }else{
+   console.log('数据过大无法计算')
+   }
+   console.log(V.toFixed(2))
+
 </script>
 
 <script id="ch0103/13" type="xxx">
@@ -132,9 +134,9 @@
 
 <script id="ch0103/14" type="xxx">
   var h = Number(prompt('小桶的高度'))
-    var r = Number(prompt('小桶的半径'))
-    var num = 20 / 3.141592 * r * r * h 
-    console.log(num.toFixed(1))
+  var r = Number(prompt('小桶的半径'))
+  var num = 20 * 1000 / 3.14159 / r / r / h
+  console.log(Math.ceil(num))
 </script>
 
 <script id="ch0103/15" type="xxx">
@@ -205,4 +207,4 @@
   }
    var nn = Math.pow(2,n)
    console.log(nn)
-  </script>
+ </script>
