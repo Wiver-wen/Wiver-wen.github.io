@@ -18,7 +18,7 @@
   var b = Number(prompt('请输入b'))
   var c = Number(prompt('请输入c'))
 
-  console.log(a / c + b / c)
+  console.log((a + b )/c)
 </script>
 
 <script id="ch0103/04" type="xxx">
@@ -38,3 +38,170 @@
   var y = x.toFixed(9) 
   console.log(y)
 </script>
+<script id="ch0103/06" type="xxx">
+  var a = Number(prompt('请输入确诊数'))
+  var b = Number(prompt('请输入死亡数'))
+  var x = b / a 
+  var y = x.toFixed(3) * 100
+  console.log("死亡率为:" + y + " % " )
+</script>
+
+<script id="ch0103/07" type="xxx">
+  var a = Number(prompt('请输入a'))
+  var b = Number(prompt('请输入b'))
+  var c = Number(prompt('请输入c'))
+  var d = Number(prompt('请输入d'))
+  var x = Number(prompt('请输入x'))
+  if(a * a < 10000 && b * b < 10000 && c * c < 10000 && d * d < 10000 && x * x < 10000 ){
+    var Fx = a*x*x*x+b*x*x+c*x+d
+    console.log("f(x):" + Fx)
+  }else{
+    console.log("请输入绝对值小于100的值!")
+  }
+  
+</script>
+
+<script id="ch0103/08" type="xxx">
+  var F = Number(prompt('请输入华氏温度'))
+  if(F >= -459.67){
+  var C = 5 * (F-32)/9)
+  console.log(C.toFixed(5))
+  }else{
+    console.log("温度超限!请输入合理的值!")
+  }
+</script>
+
+<script id="ch0103/09" type="xxx">
+  var radius = Number(prompt('圆的半径'))
+  if(radius>0&&radius<=10000){
+  var dia = 2*radius
+  var cir = 3.1915926 * dia
+  var area = 3.1415926 * radius *radius
+  console.log(dia.toFixed(4))
+  console.log(cir.toFixed(4))
+  console.log(area.toFixed(4))
+  }else{
+    console.log("数据过大无法计算")
+  }
+</script>
+
+<script id="ch0103/10" type="xxx">
+  var R1 = Number(prompt('请输入R1的阻值'))
+  var R2 = Number(prompt('请输入R2的阻值'))
+  var R3 = 1 / (1/R1+1/R2)
+  console.log(R3.toFixed(2))
+</script>
+
+<script id="ch0103/11" type="xxx">
+  var a = Number(prompt('请输入a的值'))
+  var b = Number(prompt('请输入b的值'))
+  console.log(a % b))
+</script>
+
+<script id="ch0103/12" type="xxx">
+  var radius = Number(prompt('请输入球的半径'))
+  while(radius<100 && radius>0){
+    var V = 4 / 3 * 3.14 * radius * radius * radius 
+    }else{
+      console.log('数据过大无法计算')
+    }
+  console.log(V)
+</script>
+
+<script id="ch0103/13" type="xxx">
+  var num = Number(prompt('请输入一个三位数'))
+  if(num<=999 && num >= 100){
+    var num1 = num % 10 
+    var num2 = ( num % 100 - num1 ) / 10 
+    var num3 = ( num - num1 - num2 * 10 ) / 100
+    console.log(num1) 
+    console.log(num2)
+    console.log(num3)
+  }else{
+    console.log('请重新输入合理的数据')
+  }
+</script>
+
+<script id="ch0103/14" type="xxx">
+    var h = Number(prompt('小桶的高度'))
+    var r = Number(prompt('小桶的半径'))
+    var num = 20 / 3.141592 * r * r * h 
+    console.log(num.toFixed(1))
+</script>
+
+<script id="ch0103/14" type="xxx">
+  var h = Number(prompt('小桶的高度'))
+    var r = Number(prompt('小桶的半径'))
+    var num = 20 / 3.141592 * r * r * h 
+    console.log(num.toFixed(1))
+</script>
+
+<script id="ch0103/15" type="xxx">
+    var n = Number(prompt('请输入你买了多少个苹果'))
+    var x = Number(prompt('请输入虫子的进食速度(每小时吃多少苹果)'))
+    var y = Number(prompt('现在虫子吃了多少个小时'))
+    if(y <= n * x && y / x == 0){
+      console.log(n - y / x)
+    }else{
+      if( y <= n*x ){
+        console.log(n - 1 - ((y - y % x))/x)
+      }else{
+        console.log('请重新输入合理的数据')
+      }
+    }
+</script>
+
+<script id="ch0103/16" type="xxx">
+   var Xa = Number(prompt('请输入A点的x坐标'))
+   var Ya = Number(prompt('请输入A点的y坐标'))
+   var Xb = Number(prompt('请输入B点的x坐标'))
+   var Yb = Number(prompt('请输入B点的y坐标'))
+   var DAB = (Xb - Xa) * ( Xb - Xa ) + (Yb - Ya) * ( Yb - Ya )
+   console.log(Math.sqrt(DAB).toFixed(3))
+</script>
+
+<script id="ch0103/17" type="xxx">
+   var Xa = Number(prompt('请输入A点的x坐标'))
+   var Ya = Number(prompt('请输入A点的y坐标'))
+   var Xb = Number(prompt('请输入B点的x坐标'))
+   var Yb = Number(prompt('请输入B点的y坐标'))
+   var Xc = Number(prompt('请输入C点的x坐标'))
+   var Yc = Number(prompt('请输入C点的y坐标'))
+   var D = (Xb - Xa) * ( Xb - Xa ) + (Yb - Ya) * ( Yb - Ya )
+   var Dab = Math.sqrt(D)
+   var k = (Yb - Ya) / (Xb- Xa)
+   var b = Ya - k * Xa
+   var h1 = k * Xc -Yc + b 
+   var h2 = Math.sqrt(k * k + 1)
+   if(h1 > 0){
+     console.log("三角形面积为:" + Dab * h1 / h2)
+   }else (
+     console.log("三角形面积为:" + Dab * ( -1 * h1 ) / h2)
+   )
+  </script>
+
+<script id="ch0103/18" type="xxx">
+   var A1 = Number(prompt('请输入等差数列的第一项'))
+   var A2 = Number(prompt('请输入等差数列的第二项'))
+   var n = Number(prompt('请输入要求的项'))
+   
+   var d = A2 - A1
+   var An = d * (n - 1) + A1
+   console.log(An)
+  </script>
+
+  <script id="ch0103/19" type="xxx">
+   var A1 = Number(prompt('请输入第一个正整数'))
+   var A2 = Number(prompt('请输入第二个正整数'))
+   var n =  A1 * A2 
+   console.log(n)
+  </script>
+
+  <script id="ch0103/19" type="xxx">
+   var n = Number(prompt('请输入一个正整数,大于零且小于31'))
+  while(n>=31 || n<0){
+    var n = Number(prompt('请输入一个正整数,大于零且小于31'))
+  }
+   var nn = Math.pow(2,n)
+   console.log(nn)
+  </script>
