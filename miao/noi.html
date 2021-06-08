@@ -17,8 +17,8 @@
   var a = Number(prompt('请输入a'))
   var b = Number(prompt('请输入b'))
   var c = Number(prompt('请输入c'))
-
-  console.log((a + b )/c)
+  var d = (a + b )/c
+  console.log(Math.floor(d))
 </script>
 
 <script id="ch0103/04" type="xxx">
@@ -38,23 +38,24 @@
   var y = x.toFixed(9) 
   console.log(y)
 </script>
+
 <script id="ch0103/06" type="xxx">
   var a = Number(prompt('请输入确诊数'))
   var b = Number(prompt('请输入死亡数'))
   var x = b / a 
   var y = x.toFixed(3) * 100
-  console.log("死亡率为:" + y + " % " )
+  console.log("死亡率为:" + y.toFixed(3) + " % " )
 </script>
 
 <script id="ch0103/07" type="xxx">
+  var x = Number(prompt('请输入x'))
   var a = Number(prompt('请输入a'))
   var b = Number(prompt('请输入b'))
   var c = Number(prompt('请输入c'))
   var d = Number(prompt('请输入d'))
-  var x = Number(prompt('请输入x'))
   if(a * a < 10000 && b * b < 10000 && c * c < 10000 && d * d < 10000 && x * x < 10000 ){
     var Fx = a*x*x*x+b*x*x+c*x+d
-    console.log("f(x):" + Fx)
+    console.log("f(x):" + Fx.toFixed(7))
   }else{
     console.log("请输入绝对值小于100的值!")
   }
@@ -123,7 +124,7 @@
 </script>
 
 <script id="ch0103/14" type="xxx">
-    var h = Number(prompt('小桶的高度'))
+  var h = Number(prompt('小桶的高度'))
     var r = Number(prompt('小桶的半径'))
     var num = 20 / 3.141592 * r * r * h 
     console.log(num.toFixed(1))
@@ -137,7 +138,7 @@
 </script>
 
 <script id="ch0103/15" type="xxx">
-    var n = Number(prompt('请输入你买了多少个苹果'))
+  var n = Number(prompt('请输入你买了多少个苹果'))
     var x = Number(prompt('请输入虫子的进食速度(每小时吃多少苹果)'))
     var y = Number(prompt('现在虫子吃了多少个小时'))
     if(y <= n * x && y / x == 0){
@@ -152,7 +153,7 @@
 </script>
 
 <script id="ch0103/16" type="xxx">
-   var Xa = Number(prompt('请输入A点的x坐标'))
+  var Xa = Number(prompt('请输入A点的x坐标'))
    var Ya = Number(prompt('请输入A点的y坐标'))
    var Xb = Number(prompt('请输入B点的x坐标'))
    var Yb = Number(prompt('请输入B点的y坐标'))
@@ -161,7 +162,7 @@
 </script>
 
 <script id="ch0103/17" type="xxx">
-   var Xa = Number(prompt('请输入A点的x坐标'))
+  var Xa = Number(prompt('请输入A点的x坐标'))
    var Ya = Number(prompt('请输入A点的y坐标'))
    var Xb = Number(prompt('请输入B点的x坐标'))
    var Yb = Number(prompt('请输入B点的y坐标'))
@@ -181,7 +182,7 @@
   </script>
 
 <script id="ch0103/18" type="xxx">
-   var A1 = Number(prompt('请输入等差数列的第一项'))
+  var A1 = Number(prompt('请输入等差数列的第一项'))
    var A2 = Number(prompt('请输入等差数列的第二项'))
    var n = Number(prompt('请输入要求的项'))
    
@@ -190,15 +191,15 @@
    console.log(An)
   </script>
 
-  <script id="ch0103/19" type="xxx">
-   var A1 = Number(prompt('请输入第一个正整数'))
+<script id="ch0103/19" type="xxx">
+  var A1 = Number(prompt('请输入第一个正整数'))
    var A2 = Number(prompt('请输入第二个正整数'))
    var n =  A1 * A2 
    console.log(n)
   </script>
 
-  <script id="ch0103/19" type="xxx">
-   var n = Number(prompt('请输入一个正整数,大于零且小于31'))
+<script id="ch0103/20" type="xxx">
+  var n = Number(prompt('请输入一个正整数,大于零且小于31'))
   while(n>=31 || n<0){
     var n = Number(prompt('请输入一个正整数,大于零且小于31'))
   }
