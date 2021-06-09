@@ -44,8 +44,8 @@
   var b = Number(prompt('请输入死亡数'))
   var x = b / a
   var x = x.toFixed(5) * 100
-  var x = x + '%'
-  console.log( x )
+  var x = x + "%"
+  console.log(x)
 </script>
 
 <script id="ch0103/07" type="xxx">
@@ -78,7 +78,7 @@
   if(radius>0&&radius<=10000){
   var dia = 2*radius
   var cir = 3.14159 * dia
-  var area = 3.1415 * radius *radius
+  var area = 3.14159 * radius *radius
   console.log(dia.toFixed(4))
   console.log(cir.toFixed(4))
   console.log(area.toFixed(4))
@@ -102,7 +102,7 @@
 </script>
 
 <script id="ch0103/12" type="xxx">
- var radius = Number(prompt('请输入球的半径'))
+  var radius = Number(prompt('请输入球的半径'))
  if(radius<100 && radius>0){
    var V = 4 / 3 * 3.14 * radius * radius * radius
    }else{
@@ -118,9 +118,8 @@
     var num1 = num % 10 
     var num2 = ( num % 100 - num1 ) / 10 
     var num3 = ( num - num1 - num2 * 10 ) / 100
-    console.log(num1) 
-    console.log(num2)
-    console.log(num3)
+    var num4= String(num1) + String(num2) + String(num3)
+    console.log(num4)
   }else{
     console.log('请重新输入合理的数据')
   }
@@ -178,9 +177,9 @@
    var h1 = k * Xc -Yc + b 
    var h2 = Math.sqrt(k * k + 1)
    if(h1 > 0){
-     console.log("三角形面积为:" + Dab * h1 / h2)
+     console.log(Dab * h1 / h2 / 2)
    }else (
-     console.log("三角形面积为:" + Dab * ( -1 * h1 ) / h2)
+     console.log(Dab * ( -1 * h1 ) / h2 / 2)
    )
   </script>
 
