@@ -431,7 +431,7 @@
 </script>
 
 <script id="ch0104/20" type="xxx">
- var a = Number(prompt('请输入a的值'))
+  var a = Number(prompt('请输入a的值'))
  var b = Number(prompt('请输入b的值'))
  var c = Number(prompt('请输入c的值'))
  var delta = b * b - 4 * a * c
@@ -485,10 +485,10 @@
 </script>
 
 <script id="ch0104/21" type="xxx">
-  var n = Number(prompt('请输入一个正整数,大于零且小于31'))
-  while(n>=31 || n<0){
-    var n = Number(prompt('请输入一个正整数,大于零且小于31'))
+  var n = Number(prompt('请输入你买了多少个苹果'))
+  var x = Number(prompt('请输入虫子的进食速度(每小时吃多少苹果)'))
+  var y = Number(prompt('现在虫子吃了多少个小时'))
+  if (y <= n * x && y / x==0) { console.log(n - y / x) } else { if (y <=n * x) { console.log(n - 1 - ((y - y % x)) / x)
+    } else { console.log('请重新输入合理的数据') }
   }
-   var nn = Math.pow(2,n)
-   console.log(nn)
- </script>
+  </script>
