@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input[type = "text"], textarea {
+        width: 300px;
+
+    }
+    label {
+        font-family: consolas;
+        cursor: pointer;
+    }
+    label input {
+        cursor: pointer;
+    }
+    em {
+        background-color: #9fcfff;
+        font-style: normal;
+    }
+    em:empty {
+        outline:  1px dotted red;
+        background-color: transparent;
+    }
+    em:nth-of-type(even){
+        background-color: #d5ebff;
+    }
+    section {
+        width: 300px;
+        position: relative;
+        overflow: hidden;
+    }
+    section textarea{
+        padding: 5px;
+        position: relative;
+        border: 2px solid ;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        font-family: consolas;
+        font-size: 16px;
+        white-space: pre-wrap;
+        z-index: 8;
+        display: block;
+        background-color: transparent;
+        line-height: 1.3;
+         word-break: break-all;
+    }
+    section pre {
+        overflow-y: scroll;
+        display: block;
+        color: transparent;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        padding: 5px;
+        border: 2px solid;
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        font-family: consolas;
+        font-size:  16px;
+        white-space: pre-wrap;
+        line-height: 1.3;
+        word-break: break-all;
+    }
+    p#regError {
+        color: red;
+        margin : 0;
+        height: 1em;
+    }
+</style>
+
+<body>
+    <div>
+        请输入正则表达式:  
+        <label> <input type="checkbox" onclick = 'run()' id = 'ignoreCase'>i </label>  
+        <label> <input type="checkbox" checked onclick = 'run()' id = 'global'>g </label> 
+        <label> <input type="checkbox" oninput = 'run()' id = 'multiline'>m </label> <br>
+        <input type="text" id = 'reg' onkeyup = 'run() ' value = 'fo.'> <br>
+        <p id = 'regError'></p>
+        请输入内容: <br>
+        <section>
+            <pre id='result'></pre>
+            <textarea name="" onscroll="setScroll()" spellcheck="false" id="strInput" cols="30" rows="10" oninput = 'run()'>foobarbaz asdfsgdasgh 
+                  foafafew 
+                foz fow fawfow fzgagd</textarea> 
+           
+        </section>
+    </div>
+    <script>
+        function run() {
+            var regSource = reg.value
+            console.log(regSource)
+            var flags = getFlags()
+            if (regSource == '') {
+                result.innerHtml = ''
+                regError.innerHTML = 'Please input any regular exrpession'
+                return
+            }
+            try {
+                var re = new RegExp(regSource, flags)
+                regError.innerHTML = ''
+            } catch (e) {
+                console.log(e)
+                regError.innerHTMl = e.message
+                result.innerHtml = ''
+                return
+            }
+            console.log(re)
+            var str = strInput.value
+            console.log(re)
+            var match
+            if (re.global) {
+                var resultHTML = ''
+                var lastIndex = re.lastIndex
+                while (match = re.exec(str)) {
+                    resultHTML += str.slice(lastIndex, match.index)
+                    resultHTML += '<em>' + match[0] + '</em>'
+                    lastIndex = re.lastIndex
+                    
+                    if (match[0] == '') {
+                        re.lastIndex++
+                    }
+                }
+                resultHTML += str.slice(lastIndex)
+                result.innerHTML = resultHTML + '\n'
+            } else {
+                var resultHTML = ''
+                match = re.exec(str)
+                resultHTML += str.slice(0, match.index)
+                resultHTML += '<em>' + match[0] + '</em>'
+                resultHTML += str.slice(match[0].length + match.index)
+                result.innerHTML = resultHTML + '\n'
+            }
+        }
+        run()
+
+        function getFlags() {
+            var flags = ''
+            if (ignoreCase.checked) {
+                flags += 'i'
+            }
+            if (global.checked) {
+                flags += 'g'
+            }
+            if (ignoreCase.muitiline) {
+                flags += 'm'
+            }
+            return flags
+        }
+
+        function setScroll() {
+            var scrollTop = strInput.scrollTop
+            result.scrollTop = scrollTop
+        }
+    </script>
+</body>
+
+</html>
