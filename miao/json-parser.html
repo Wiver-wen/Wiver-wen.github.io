@@ -1,0 +1,112 @@
+<script>
+    var parseJSON = (function () {
+
+        //  Json 解析器的实现
+        var str = '[1,"fooo",[1,222235,true],{"a":1,"b":[1,2,3],"c":{"x":1,"yyy":false}},5,null]'
+        var i = 0
+        // 每个函数的作用都是从i开始解析出相应的内容,并将i指向解析完成的后一个位置,以供后续其他函数继续解析
+        return function parseJSON(input) {
+            str = input
+            i = 0
+            return parseValue()
+        }
+        function parseValue() {
+            var c = str[i]
+
+            if (c == '[') {
+                return parseArray()
+            }
+            if (c == '{') {
+                return parseObject()
+            }
+            if (c == '"') {
+                return parseString()
+            }
+            if (c == 't') {
+                return parseTrue()
+            }
+            if (c == 'f') {
+                return parseFalse()
+            }
+            if (c == 'n') {
+                return parseNull()
+            }
+            return parseNumber()
+
+        }
+        //从i的位置解析出 true false null
+        function parseTrue() {
+            i += 4
+            return true
+        }
+        function parseFalse() {
+            i += 5
+            return false
+        }
+        function parseNull() {
+            i += 4
+            return null
+        }
+
+        // 从i的位置解析出字符串 并将i移动到下一个需要解析的位置
+        function parseString() {   //只有当i指向 " 时才会进入此函数
+            i++    //跳过当前"
+            var result = ''
+            while (str[i] != '"') {  //循环遍历字符串的内容
+                result += str[i]   //将字符串内容添加到result
+                i++    //将i指向下一个需要解析的内容
+            }
+            i++  //跳过最后一个 "
+            return result   //将解析结果返回
+        }
+
+        //从i的位置解析出数字 只考虑正整数,此时i指向数字的第一位
+        function parseNumber() {
+            var num = ''
+            while (str[i] <= '9' && str[i] >= '0') {  //一定要加'',为了防止类型为数字
+                num += str[i]  //类型为数字有可能称为加法运算
+                i++
+            }
+            return Number(num) //将字符串类型转换为数字
+        }
+
+        //解析数组,此时i指向数组的第一个'['
+        function parseArray() {
+            var ary = []
+            i++            //跳过 第一个'['
+            if (str[i] == ']') {  //空数组
+                i++         //将i指向下一个需要解析的位置
+                return ary  //返回空数组
+            }
+            while (str[i] !== ']') {
+                var val = parseValue()
+                ary.push(val)
+                if (str[i] == ',') {
+                    i++ //跳过逗号
+                }
+            }
+            i++
+            return ary
+        }
+        //解析对象,此时i指向对象的第一个'{'
+        function parseObject() {
+            i++
+            var obj = {}
+            if (obj[i] == '}') {
+                i++
+                return obj
+            }
+            while (str[i] !== '}') {
+                var key = parseString()
+                i++
+                var value = parseValue()
+                obj[key] = value
+                if (str[i] == ',') {
+                    i++
+                }
+            }
+            i++
+            return obj
+        }
+    })()
+</script>
